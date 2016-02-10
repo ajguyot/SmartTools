@@ -1,3 +1,13 @@
+// ==UserScript==
+// @name        	ST Tools Beta
+// @namespace   	triple7factor
+// @description 	IDE tools
+// @include     	https://graph.api.smartthings.com/*
+// @include			https://smartthings.zendesk.com/*
+// @version     	1.0
+// @grant       	none
+// ==/UserScript==
+
 // Version 1.3.0
 
 // Determine what page is being viewed and display appropriate options
@@ -803,6 +813,8 @@ function togglePings() {
 
 function impersonateFeild(a) {
 
+    // Keep window open while impersonation field is visible
+    keepOpen=true;
     if (!$('#st_imp_form').length) {
 
         keepOpen = true;
